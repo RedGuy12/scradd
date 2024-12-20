@@ -13,21 +13,26 @@
 		"security:openssf-scorecard",
 		"workarounds:all"
 	],
-
 	"configMigration": true,
-	"git-submodules": { "enabled": true },
+	"git-submodules": {
+		"enabled": true
+	},
 	"gitIgnoredAuthors": ["github-actions[bot]@users.noreply.github.com"],
-	"lockFileMaintenance": { "enabled": true, "schedule": ["* 18-21 */2 * *"] },
+	"lockFileMaintenance": {
+		"enabled": true,
+		"schedule": ["* 18-21 */2 * *"]
+	},
 	"postUpdateOptions": ["npmDedupe", "pnpmDedupe", "yarnDedupeHighest"],
 	"prConcurrentLimit": 0,
-	"pre-commit": { "enabled": true },
+	"pre-commit": {
+		"enabled": true
+	},
 	"prHourlyLimit": 0,
 	"rebaseWhen": "behind-base-branch",
 	"recreateWhen": "always",
 	"semanticCommits": "enabled",
 	"separateMajorMinor": false,
 	"updateInternalDeps": true,
-
 	"packageRules": [
 		{
 			"matchUpdateTypes": ["major", "replacement"],
@@ -41,7 +46,6 @@
 			"matchUpdateTypes": ["lockFileMaintenance", "patch", "pin", "pinDigest"],
 			"labels": ["version-update:semver-patch"]
 		},
-
 		{
 			"matchDepTypes": [
 				"dependencies",
@@ -73,7 +77,6 @@
 			"matchUpdateTypes": ["lockFileMaintenance"],
 			"labels": ["indirect"]
 		},
-
 		{
 			"matchPackageNames": ["@redguy12/prettier*", "prettier"],
 			"groupName": "prettier config packages"
@@ -116,10 +119,7 @@
 			"groupName": "eslint monorepo"
 		},
 		{
-			"matchDatasources": [
-				"docker",
-				"node-version"
-			],
+			"matchDatasources": ["docker", "node-version"],
 			"matchPackageNames": [
 				"/(?:^|/)node$/",
 				"!calico/node",
@@ -128,12 +128,17 @@
 			],
 			"commitMessageTopic": "Node.js",
 			"groupName": "Node.js",
-			"major": { "enabled": true },
-			"minor": { "enabled": false },
-			"patch": { "enabled": false },
+			"major": {
+				"enabled": true
+			},
+			"minor": {
+				"enabled": false
+			},
+			"patch": {
+				"enabled": false
+			},
 			"versioning": "node"
 		},
-
 		{
 			"matchDatasources": ["npm"],
 			"matchPackageNames": ["@types/**"],
@@ -145,17 +150,23 @@
 			"groupName": "Node.js",
 			"overrideDatasource": "node-version",
 			"overridePackageName": "node",
-			"patch": { "enabled": false },
+			"patch": {
+				"enabled": false
+			},
 			"versioning": "node"
 		},
-		
 		{
 			"matchDepNames": ["@types/node", "python", "npm", "poetry"],
-			"major": { "enabled": true },
-			"minor": { "enabled": false },
-			"patch": { "enabled": false }
+			"major": {
+				"enabled": true
+			},
+			"minor": {
+				"enabled": false
+			},
+			"patch": {
+				"enabled": false
+			}
 		}
 	],
-
-	"includeForks": true
+	"forkProcessing": "enabled"
 }
