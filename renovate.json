@@ -1,7 +1,5 @@
 {
-	"extends": [
-		"github>cobaltt7/renovate-config:org-inherited-config"
-	],
+	"extends": ["github>cobaltt7/renovate-config:org-inherited-config"],
 
 	"forkProcessing": "enabled"
 }
