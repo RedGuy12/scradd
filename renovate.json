@@ -23,7 +23,11 @@
 	"pre-commit": { "enabled": true },
 	"prHourlyLimit": 0,
 	"rebaseWhen": "behind-base-branch",
-	
+	"recreateWhen": "always",
+	"semanticCommits": "enabled",
+	"separateMajorMinor": false,
+	"updateInternalDeps": true,
+
 	"packageRules": [
 		{
 			"matchUpdateTypes": ["major", "replacement"],
