@@ -20,6 +20,9 @@
 	"lockFileMaintenance": { "enabled": true, "schedule": ["* 18-21 */2 * *"] },
 	"postUpdateOptions": ["npmDedupe", "pnpmDedupe", "yarnDedupeHighest"],
 	"prConcurrentLimit": 0,
+	"pre-commit": { "enabled": true },
+	"prHourlyLimit": 0,
+	"rebaseWhen": "behind-base-branch",
 	
 	"packageRules": [
 		{
