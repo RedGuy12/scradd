@@ -23,7 +23,7 @@
 	"pre-commit": { "enabled": true },
 	"prHourlyLimit": 0,
 	"rebaseWhen": "behind-base-branch",
-	
+
 	"packageRules": [
 		{
 			"matchUpdateTypes": ["major", "replacement"],
@@ -112,10 +112,7 @@
 			"groupName": "eslint monorepo"
 		},
 		{
-			"matchDatasources": [
-				"docker",
-				"node-version"
-			],
+			"matchDatasources": ["docker", "node-version"],
 			"matchPackageNames": [
 				"/(?:^|/)node$/",
 				"!calico/node",
@@ -144,7 +141,7 @@
 			"patch": { "enabled": false },
 			"versioning": "node"
 		},
-		
+
 		{
 			"matchDepNames": ["@types/node", "python", "npm", "poetry"],
 			"major": { "enabled": true },
